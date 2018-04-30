@@ -1,0 +1,31 @@
+<head></head>
+<body bgcolor="#e5e5e5">
+<font face="tahoma"><h1><div align="center">SimpleIdeForMicroJ</h1></font>
+<div align="center"> <img src="https://i.hizliresim.com/bBzEMb.jpg"></div>
+<p><font face="tahoma" size="3" >
+<b>MikroJ'ye verilen bir String(kod) öncelikle Scanner sýnýfýnda karakter karakter kontrol edilerek Token'lara dönüþtürülür. 
+Token'larýn türleri Scanner sýnýfýna ait <font color="red">nextToken()</font> metodunun içindeki dört þart ile belirleniyor.</b></font></p>
+<div align="center"> <img src="https://i.hizliresim.com/G9842Z.jpg" width="600" height="300" ></div>
+<p><font face="tahoma" size="3" >
+<b>Birinci þartta;gelen karakterin boþluk, tab boþluðu veya satýr boþluðu olup olmadýðý kontrol ediliyor. Ýkinci þartta karakterin bir harf olup olmadýðý kontrol 
+ediliyor. Üçüncü þart karakterin bir sayý olup olmadýðýný kontrol ediyor. Eðer karakter bu üç þartý saðlamýyorsa Token sýnýfý içerisinde
+tanýmlanan karakterlere bakýlýyor. Eðer seçili karakter Token sýnýfýnýn içerisinde tanýmlanmamýþsa sonuç EOF dönüyor.
+Scanner verilen string içerisindeki sayýlarý, identifier ve artý eksi gibi karakterleri çözümleyip Token'a dönüþtürür. String Token'lara dönüþtükten sonra karþýmýza
+iki tane bölüm çýkýyor. Bunlar Checker ve Parser.</b></font></p>
+<div align="center"> <img src="https://i.hizliresim.com/D7N56v.jpg"width="300" height="400" ></div>
+<p><font face="tahoma" size="3" >
+<b>Checker'ýn görevi bir String'in(kodun) microJ için doðru yazýlýp yazýlmadýðýný kontrol etmek. Yani String'in microJ'nin gramerine uyup uymadýðýný kontrol eder.  
+Checker'da Token'larýn deðerlerine bakýlmaz, yeni nesneler oluþturulup hesaplamalar yapýlmaz. 
+Parser'ýn görevi ise hem string'in microJ gramerine uygun yazýlýp yazýlmadýðýný kontrol etmek hem de verilen deðerlere göre 
+hesaplamalar yaparak sonucu geri döndürmektir.</b></font></p>
+<div align="center"> <img src="https://i.hizliresim.com/EPaA6Z.jpg"width="500" height="300" ></div>
+<p><font face="tahoma" size="3" >
+<b>Parser sýnýfý içerisinde <font color="red">statement()</font> metodunda ilk kontrol "print" kalýbý üzerine
+yapýlýyor. Token'ýn deðeri alýnarak karþýlaþtýrma yapýlýyor. Eðer deðer "print"'e eþitse yeni bir PrintStat nesnesi oluþturuluyor.
+PrintStat parametre olarak bir Expression alýyor. Yani sabit bir deðeri de yazdýrabiliriz veya matematiksel bir fonksiyon hesaplatabilir ve öyle de yazdýrabiliriz.
+Eðer Token'ýn deðeri "print" deðilse o zaman mikroJ gelen token'ý deðiþken olarak kabul ediyor ve yeni bir Assignment nesnesi
+oluþturuluyor. Parametre olarak String deðiþken adý ve Expression fonksiyon veya sabit bir deðer alýyor. Þunu atlamadan geçmeyelim
+Assignment nesnesi oluþmadan hemen önce <font color="blue">match()</font> metodu ile deðiþken ve deðer arasýnda eþittir karakterei olup olmadýðý
+kontrol ediliyor. Eðer eþittir yoksa Exception fýrlatýlarak iþlem yarýda kesiliyor. </b></font></p>
+<b> Proje indirme linki => https://drive.google.com/open?id=13rtnUJsgo0irBwslz3Y0pGCYW3haps6C</b>
+</body>
